@@ -1,0 +1,70 @@
+{
+  "_info": "Completează valorile null după ce te loghezi de pe rețeaua UPB / E-nformation. Apoi rulează: python3 build.py",
+  "student": {
+    "nume": "Cristi Miloiu",
+    "program": "Master IISC, UPB-ETTI",
+    "email_upb": "cristi.miloiu@stud.etti.upb.ro",
+    "google_scholar_url": "https://scholar.google.com/citations?user=MUFLqowAAAAJ",
+    "orcid_id": "0009-0001-1687-9158 (https://orcid.org/0009-0001-1687-9158)",
+    "researchgate_url": "https://www.researchgate.net/profile/Cristi-Miloiu",
+    "publons_researcherid": "RLL-5085-2026",
+    "scopus_author_id": null,
+    "wos_researcherid": "RLL-5085-2026",
+    "contributii_introduse": [
+      "Biografie, 6 cuvinte cheie, 3 linkuri (website, GitHub, LinkedIn), țara: România",
+      "Educație: M.Eng. Ingineria Informației și a Sistemelor de Calcul (IISC), UPB-ETTI, 2025–prezent (disertație în lucru: „Information Visibility in the Age of LLMs”); B.Sc. Computer Science, UPB, 2021–2025",
+      "Angajare: Genezio – Tech Lead & Product Owner (2026–prezent), Software Engineer (2023–2026), Full Stack Intern (2023); Huawei Enterprise GSC – System Engineering Intern (2022); UPB",
+      "Lucrare de licență (Dissertation/Thesis, 2025): „Automatic Generation of REST and GraphQL API Interfaces using LLMs”",
+      "Comunicări la Sesiunea de Comunicări Științifice Studențești UPB: „API in Seconds” (2024), „Number Plate Recognition” (2023)",
+      "Software: Audio Analysis Platform (2024), Facial Emotion Recognition using ViT (2024), Comparative Modeling Environments – cellular automata/HPC (2023)",
+      "Distincții: locul 3 – lucrare de licență, SCSS 2025; locul 4 – SCSS 2024; locul 1 – Electron Hackathon 2023; locul 2 – SCSS 2023",
+      "Membership/Service: LSE – Technical Coordinator (2022–2024) și Board Member; Student Representative UPB; mentor The Bucharest Hackathon și Innovation Labs",
+      "ResearchGate: introducere, discipline (AI, Computer Engineering), afiliere UPB-ETTI (Master's Student), diplomă B.Sc., 4 lucrări (teză, 2 prezentări SCSS, raport tehnic) și Follow la conf. Bogdan Cristian Florea",
+      "Web of Science Researcher Profile (fost Publons): ResearcherID RLL-5085-2026, afiliere UNSTPB, sincronizare bidirecțională cu ORCiD activată",
+      "Google Scholar: profil public verificat cu emailul stud.etti.upb.ro, afiliere, 5 domenii de interes, homepage; lucrarea ESP32 indexată automat (titlu corectat) + lucrarea de licență adăugată manual"
+    ],
+    "rg": {
+      "publicatii": 4,
+      "citiri": null,
+      "citari": 0,
+      "recomandari": null,
+      "urmaritori": null,
+      "urmariti": 1,
+      "intrebari_raspunsuri": null,
+      "research_interest": null,
+      "rg_score": null
+    }
+  },
+  "caz_n": {
+    "wos": {
+      "_comentariu": "WoS ResearcherID U-3645-2017 (profil https://www.webofscience.com/wos/author/record/822855), colectat 07.11.2026: 34 documente totale, 29 în Core Collection, 232 citări, 222 articole citante, h=8. Raportul de citare fără autocitări și lista pe articole sunt funcții premium (necesită acces UPB/E-nformation).",
+      "h_index": 8,
+      "h_index_fara_autocitari": null,
+      "documente": 29,
+      "citari_total": 232,
+      "citari_fara_autocitari": null,
+      "citari_per_articol": null
+    },
+    "scopus": {
+      "_comentariu": "Scopus Preview, Author ID 35315667300, colectat 07.11.2026: 33 documente, 427 citări din 408 documente, h=10. Excluderea autocitărilor (Citation overview) necesită acces instituțional complet.",
+      "h_index": 10,
+      "h_index_fara_autocitari": null,
+      "documente": 33,
+      "citari_total": 427,
+      "citari_fara_autocitari": null,
+      "citari_per_articol": null
+    },
+    "researchgate": {
+      "_comentariu": "https://www.researchgate.net/profile/Bogdan-Florea – colectat 07.11.2026. RG nu oferă h-index fără autocitări și nici citări per articol în lista publică.",
+      "h_index": 10,
+      "h_index_fara_autocitari": null,
+      "publicatii": 32,
+      "citari_total": 504,
+      "citiri": 21384,
+      "research_interest": 314.5,
+      "rg_score": null,
+      "citari_per_articol": null,
+      "recomandari": 16
+    }
+  }
+}

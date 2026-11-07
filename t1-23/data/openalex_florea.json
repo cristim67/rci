@@ -1,0 +1,258 @@
+[
+ {
+  "title": "Blockchain IoT for Smart Electric Vehicles Battery Management",
+  "year": 2020,
+  "cited": 77,
+  "listed": 77,
+  "self": 1,
+  "doi": "https://doi.org/10.3390/su12103984"
+ },
+ {
+  "title": "Blockchain and Internet of Things data provider for smart applications",
+  "year": 2018,
+  "cited": 69,
+  "listed": 69,
+  "self": 4,
+  "doi": "https://doi.org/10.1109/meco.2018.8406041"
+ },
+ {
+  "title": "A Blockchain-Enabled Framework for mHealth Systems",
+  "year": 2021,
+  "cited": 66,
+  "listed": 66,
+  "self": 0,
+  "doi": "https://doi.org/10.3390/s21082828"
+ },
+ {
+  "title": "Hybrid Beamforming in Massive MIMO for Next-Generation Communication Technology",
+  "year": 2023,
+  "cited": 47,
+  "listed": 47,
+  "self": 0,
+  "doi": "https://doi.org/10.3390/s23167294"
+ },
+ {
+  "title": "IoT-Enhanced Decision Support System for Real-Time Greenhouse Microclimate Monitoring and Control",
+  "year": 2024,
+  "cited": 30,
+  "listed": 30,
+  "self": 0,
+  "doi": "https://doi.org/10.3390/technologies12110230"
+ },
+ {
+  "title": "Game-o-Meta: Trusted Federated Learning Scheme for P2P Gaming Metaverse beyond 5G Networks",
+  "year": 2023,
+  "cited": 33,
+  "listed": 31,
+  "self": 0,
+  "doi": "https://doi.org/10.3390/s23094201"
+ },
+ {
+  "title": "RanKer: An AI-Based Employee-Performance Classification Scheme to Rank and Identify Low Performers",
+  "year": 2022,
+  "cited": 27,
+  "listed": 27,
+  "self": 0,
+  "doi": "https://doi.org/10.3390/math10193714"
+ },
+ {
+  "title": "Electric Vehicles Battery Management Network Using Blockchain IoT",
+  "year": 2020,
+  "cited": 23,
+  "listed": 23,
+  "self": 0,
+  "doi": "https://doi.org/10.1109/aqtr49680.2020.9129916"
+ },
+ {
+  "title": "BlockCrime: Blockchain and Deep Learning-Based Collaborative Intelligence Framework to Detect Malicious Activities for Public Safety",
+  "year": 2022,
+  "cited": 22,
+  "listed": 21,
+  "self": 0,
+  "doi": "https://doi.org/10.3390/math10173195"
+ },
+ {
+  "title": "Petri net modeling for hybrid systems control. Application for a multicellular converter",
+  "year": 2013,
+  "cited": 5,
+  "listed": 5,
+  "self": 0,
+  "doi": "https://doi.org/10.1109/atee.2013.6563526"
+ },
+ {
+  "title": "A Petri net approach to multicellular chopper control",
+  "year": 2011,
+  "cited": 5,
+  "listed": 5,
+  "self": 0,
+  "doi": "https://doi.org/10.1109/siitme.2011.6102723"
+ },
+ {
+  "title": "LIQUID LEVEL CONTROL FOR INDUSTRIAL THREE TANKS SYSTEM BASED ON SLIDING MODE CONTROL",
+  "year": 2015,
+  "cited": 6,
+  "listed": 6,
+  "self": 0,
+  "doi": null
+ },
+ {
+  "title": "MIDI-based controller of electrical drives",
+  "year": 2014,
+  "cited": 5,
+  "listed": 5,
+  "self": 0,
+  "doi": "https://doi.org/10.1109/ecai.2014.7090159"
+ },
+ {
+  "title": "An integrated e-learning platform for use in higher education",
+  "year": 2011,
+  "cited": 5,
+  "listed": 5,
+  "self": 0,
+  "doi": "https://doi.org/10.1109/siitme.2011.6102754"
+ },
+ {
+  "title": "Smartphone input/output interface for IoT applications",
+  "year": 2017,
+  "cited": 4,
+  "listed": 4,
+  "self": 1,
+  "doi": "https://doi.org/10.1109/telfor.2017.8249402"
+ },
+ {
+  "title": "Artificial Intelligence Advancements in Fetal Monitoring: Enhancing Prenatal Care",
+  "year": 2024,
+  "cited": 3,
+  "listed": 3,
+  "self": 0,
+  "doi": "https://doi.org/10.1007/978-3-031-61625-9_12"
+ },
+ {
+  "title": "A systematic review on AI-driven noninvasive fetal ECG processing and analysis methods",
+  "year": 2026,
+  "cited": 1,
+  "listed": 1,
+  "self": 0,
+  "doi": "https://doi.org/10.3389/fdgth.2026.1926578"
+ },
+ {
+  "title": "Discrete event control for multicell choppers driving DC machines",
+  "year": 2010,
+  "cited": 4,
+  "listed": 4,
+  "self": 2,
+  "doi": "https://doi.org/10.1109/siitme.2010.5652892"
+ },
+ {
+  "title": "Smartphone Controlled Autonomous Robotic Platform",
+  "year": 2018,
+  "cited": 4,
+  "listed": 4,
+  "self": 0,
+  "doi": "https://doi.org/10.1109/ecticon.2018.8619895"
+ },
+ {
+  "title": "INFLUENCE OF COMPUTER COMPUTATION PRECISION IN CHAOS ANALYSIS",
+  "year": 2013,
+  "cited": 3,
+  "listed": 3,
+  "self": 1,
+  "doi": null
+ },
+ {
+  "title": "Image enciphering by using Rössler Map",
+  "year": 2011,
+  "cited": 1,
+  "listed": 1,
+  "self": 0,
+  "doi": "https://doi.org/10.1109/iccp.2011.6047885"
+ },
+ {
+  "title": "Influence of control type on chaotic behavior of the Alpazur oscillator",
+  "year": 2014,
+  "cited": 1,
+  "listed": 1,
+  "self": 1,
+  "doi": "https://doi.org/10.1109/isfee.2014.7050548"
+ },
+ {
+  "title": "AutoChain: An Incentive-Based Blockchain System for Air Quality Monitoring and Emissions Reduction",
+  "year": 2023,
+  "cited": 1,
+  "listed": 1,
+  "self": 0,
+  "doi": "https://doi.org/10.1145/3651655.3651666"
+ },
+ {
+  "title": "Integrated Platform for Ecosystems Monitoring Based on Remote and in Situ Measurements",
+  "year": 2020,
+  "cited": 1,
+  "listed": 1,
+  "self": 0,
+  "doi": "https://doi.org/10.1109/igarss39084.2020.9323113"
+ },
+ {
+  "title": "An analogical control method of the Alpazur oscillator",
+  "year": 2015,
+  "cited": 0,
+  "listed": 0,
+  "self": 0,
+  "doi": "https://doi.org/10.1109/atee.2015.7133920"
+ },
+ {
+  "title": "A discrete observer design for multicellular choppers",
+  "year": 2011,
+  "cited": 0,
+  "listed": 0,
+  "self": 0,
+  "doi": "https://doi.org/10.1109/isscs.2011.5978736"
+ },
+ {
+  "title": "Petri net control strategy for series multilevel converters using a state observer",
+  "year": 2016,
+  "cited": 0,
+  "listed": 0,
+  "self": 0,
+  "doi": "https://doi.org/10.1109/isfee.2016.7803199"
+ },
+ {
+  "title": "Automatic Real-Estate Image Analysis for Retrieval and Classification",
+  "year": 2022,
+  "cited": 0,
+  "listed": 0,
+  "self": 0,
+  "doi": "https://doi.org/10.2478/bipie-2022-0009"
+ },
+ {
+  "title": "Blockchain Solution for Road Traffic Pollution Monitoring and Regulation",
+  "year": 2024,
+  "cited": 0,
+  "listed": 0,
+  "self": 0,
+  "doi": "https://doi.org/10.1109/atoms60779.2024.10921569"
+ },
+ {
+  "title": "Blockchain-Driven Gamification Solution for Improving Road Traffic Safety",
+  "year": 2024,
+  "cited": 0,
+  "listed": 0,
+  "self": 0,
+  "doi": "https://doi.org/10.1145/3711954.3711963"
+ },
+ {
+  "title": "Blockchain Gamification Solution for Regulation of Road Traffic Emissions",
+  "year": 2025,
+  "cited": 0,
+  "listed": 0,
+  "self": 0,
+  "doi": "https://doi.org/10.3390/technologies13110536"
+ },
+ {
+  "title": "A Dynamic-Addressing Protocol for Extensible I2C-Based Device Networks",
+  "year": 2026,
+  "cited": 0,
+  "listed": 0,
+  "self": 0,
+  "doi": "https://doi.org/10.1109/meco70748.2026.11579009"
+ }
+]

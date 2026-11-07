@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8"/>
+<title>Tema S1 – RCI – N = 27</title>
+<style>
+  @page { size: A4; margin: 16mm 15mm 16mm 15mm; }
+  :root { --ink:#1a202c; --muted:#4a5568; --line:#cbd5e0; --accent:#2b6cb0; --soft:#ebf4ff; }
+  body { font-family: "Helvetica Neue", Arial, sans-serif; color: var(--ink); background:#fff; font-size: 10.5pt; line-height: 1.45; margin: 0; }
+  h1 { font-size: 20pt; margin: 0 0 4px; color: var(--accent); }
+  h2 { font-size: 14pt; border-bottom: 2px solid var(--accent); padding-bottom: 3px; margin: 22px 0 8px; page-break-after: avoid; }
+  h3 { font-size: 11.5pt; margin: 14px 0 6px; color: #2c5282; page-break-after: avoid; }
+  p { margin: 5px 0; text-align: justify; }
+  .cover { border: 2px solid var(--accent); padding: 22px 24px; margin-bottom: 14px; }
+  .cover .meta { color: var(--muted); font-size: 10pt; }
+  .pb { page-break-before: always; }
+  table { border-collapse: collapse; width: 100%; margin: 6px 0 10px; font-size: 9pt; page-break-inside: auto; }
+  th, td { border: 1px solid var(--line); padding: 3px 5px; vertical-align: top; }
+  th { background: var(--soft); text-align: left; }
+  td.n { text-align: right; white-space: nowrap; }
+  tr { page-break-inside: avoid; }
+  tr.core td { background: #f0fff4; }
+  .kpi { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin: 8px 0; }
+  .kpi div { border: 1px solid var(--line); border-radius: 6px; padding: 7px 9px; }
+  .kpi b { display: block; font-size: 16pt; color: var(--accent); }
+  .kpi span { font-size: 8.5pt; color: var(--muted); }
+  .chart { width: 100%; height: auto; margin: 6px 0 2px; page-break-inside: avoid; }
+  .chart .ct { font-size: 12px; font-weight: 700; fill: #2d3748; }
+  .chart .hl { font-size: 12px; font-weight: 700; fill: #276749; }
+  .chart .ax { font-size: 10px; fill: #4a5568; }
+  .chart .val { font-size: 9px; fill: #1a202c; }
+  .chart .pend { font-size: 10px; fill: #a0aec0; font-style: italic; }
+  .chart .grid { stroke: #e2e8f0; stroke-width: 1; }
+  .chart .diag { stroke: #276749; stroke-width: 1.5; stroke-dasharray: 5 3; }
+  .chart .hcore { fill: #c6f6d5; opacity: .55; stroke: #38a169; stroke-width: 1; }
+  .ph { border: 2px dashed #a0aec0; border-radius: 6px; padding: 10px 12px; margin: 8px 0; color: var(--muted); font-size: 9.5pt; background: #f7fafc; page-break-inside: avoid; }
+  .todo { color: #c53030; font-style: italic; }
+  .note { background: #fffaf0; border-left: 4px solid #dd6b20; padding: 6px 10px; margin: 8px 0; font-size: 9.5pt; }
+  figure { margin: 8px 0; page-break-inside: avoid; } figure img { max-width: 100%; border: 1px solid var(--line); }
+  figcaption { font-size: 9pt; color: var(--muted); }
+  code { font-size: 9pt; background: #edf2f7; padding: 0 3px; border-radius: 3px; }
+  a { color: var(--accent); text-decoration: none; word-break: break-all; }
+  ul { margin: 4px 0 6px 18px; padding: 0; } li { margin: 2px 0; }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div class="meta">Universitatea Națională de Știință și Tehnologie POLITEHNICA București · Facultatea ETTI · Master IISC</div>
+  <h1>Tema de seminar S1 – Rețele Complexe de Interconectare</h1>
+  <div style="font-size:12pt;margin:4px 0 10px">Determinarea indicatorilor scientometrici în rețele științifice &amp; academice și rețele sociale pentru cercetători</div>
+  <table style="width:auto;font-size:10pt">
+    <tr><th>Student</th><td>{{NUME}} ({{PROGRAM}})</td></tr>
+    <tr><th>Caz N (b)</th><td>N = 27 – conf. dr. ing. Bogdan Cristian Florea (UPB-ETTI, dep. EAII)</td></tr>
+    <tr><th>Coordonator</th><td>prof. dr. ing. Radu Rădescu</td></tr>
+    <tr><th>Data colectării datelor</th><td>{{DATA}} (raport generat la {{AZI}})</td></tr>
+  </table>
+</div>
+
+<h2>Cuprins</h2>
+<ol>
+  <li>Indicele Hirsch – definiție și procedură de calcul</li>
+  <li>Etapa 1 – Baze de date internaționale (Google Scholar, Web of Science, Scopus)<br/>
+      &nbsp;&nbsp;(a) cazul personal · (b) cazul N = 27</li>
+  <li>Etapa 2 – Rețele cu conținut controlat de utilizator (ORCiD, ResearchGate, Publons)</li>
+  <li>Analiză comparativă și justificarea diferențelor (inclusiv efectul autocitărilor)</li>
+  <li>Concluzii</li>
+  <li>Anexe – tabelele detaliate pe articole</li>
+</ol>
+
+<h2>1. Indicele Hirsch (h-index)</h2>
+<p>Indicele h a fost propus de J. E. Hirsch (2005): <b>un cercetător are indicele h dacă h dintre cele N<sub>p</sub> lucrări ale sale au fiecare cel puțin h citări</b>, iar celelalte (N<sub>p</sub> − h) lucrări au cel mult h citări fiecare. Procedura de calcul:</p>
+<ol>
+  <li>se extrage lista tuturor lucrărilor autorului din baza de date (căutare după autor / profil de autor);</li>
+  <li>se sortează lucrările descrescător după numărul de citări <i>c<sub>1</sub> ≥ c<sub>2</sub> ≥ … ≥ c<sub>n</sub></i>;</li>
+  <li>h = max{ i : c<sub>i</sub> ≥ i } – grafic, h este abscisa punctului în care curba citărilor intersectează dreapta <i>citări = rang</i> (linia punctată verde din figuri; zona verde este „nucleul h”);</li>
+  <li>se repetă calculul după scăderea autocitărilor din fiecare c<sub>i</sub> – <b>valoarea semnificativă este cea fără autocitări</b>.</li>
+</ol>
+<p>Indicatori asociați folosiți în raport: <b>i10-index</b> (numărul de lucrări cu ≥ 10 citări, specific Google Scholar), numărul total de citări și media citărilor pe articol.</p>
+
+<h2 class="pb">2. Etapa 1 – Baze de date internaționale</h2>
+
+<h3>2(a). Cazul personal – {{NUME}}</h3>
+<p>În momentul redactării nu am lucrări publicate în surse indexate WoS sau Scopus. Google Scholar a indexat automat lucrarea „Sistem dedicat pentru achiziția și procesarea avansată a semnalelor audio folosind un ESP32” (C. Miloiu, C. Colacel, 2024), găsită de robotul său pe site-ul personal; am adăugat manual lucrarea de licență (2025). Niciuna nu are încă citări. Prin urmare, căutarea de sine în WoS și Scopus nu returnează un profil de autor, iar <b>h-index = 0</b> în toate variantele (cu și fără autocitări). Conform enunțului, conținutul WoS/Scopus nu poate fi introdus de autor, ci este indexat automat după publicarea în surse recunoscute.</p>
+<table>
+  <tr><th>Variantă</th><th>Cont / identificator</th><th>Lucrări</th><th>Citări</th><th>h-index</th><th>h fără autocitări</th></tr>
+  <tr><td>1. Google Scholar</td><td>{{ST_GS}}</td><td class="n">2</td><td class="n">0</td><td class="n">0</td><td class="n">0</td></tr>
+  <tr><td>2. Web of Science</td><td>ResearcherID: {{ST_WOS}}</td><td class="n">0</td><td class="n">0</td><td class="n">0</td><td class="n">0</td></tr>
+  <tr><td>3. Scopus</td><td>Author ID: {{ST_SCOPUS}}</td><td class="n">0</td><td class="n">0</td><td class="n">0</td><td class="n">0</td></tr>
+  <tr><td>B. ResearchGate</td><td>{{ST_RG}}</td><td class="n">{{ST_RG_PUB}}</td><td class="n">{{ST_RG_CIT}}</td><td class="n">0</td><td class="n">0</td></tr>
+</table>
+<p>Reprezentarea grafică pe articole este degenerată (nicio lucrare cu citări): curba citărilor coincide cu axa absciselor, deci intersecția cu dreapta <i>citări = rang</i> are loc în origine (h = 0).</p>
+{{SHOT_A_GOOGLE_SCHOLAR}}
+{{SHOT_A_WOS}}
+{{SHOT_A_SCOPUS}}
+
+<h3 class="pb">2(b). Cazul N = 27 – conf. dr. ing. Bogdan Cristian Florea</h3>
+<p>Profilul public al cercetătorului: Google Scholar <a href="{{GS_URL}}">{{GS_URL}}</a> · ORCiD <a href="https://orcid.org/{{ORCID_N}}">{{ORCID_N}}</a> · Scopus Author ID <b>{{SCOPUS_N}}</b> (declarat în ORCiD) · ResearchGate <a href="{{RG_N}}">{{RG_N}}</a>. Domenii: automatică, sisteme hibride, blockchain &amp; IoT, arhitecturi software, optimizare.</p>
+
+<h3>Varianta 1 – Google Scholar</h3>
+<div class="kpi">
+  <div><b>{{GS_CIT}}</b><span>citări totale ({{GS_CIT5}} din 2021)</span></div>
+  <div><b>{{GS_H}}</b><span>h-index ({{GS_H5}} din 2021)</span></div>
+  <div><b>{{GS_I10}}</b><span>i10-index ({{GS_I105}} din 2021)</span></div>
+  <div><b>{{GS_NART}}</b><span>lucrări în profil · medie {{GS_AVG}} citări/articol</span></div>
+</div>
+<p>Recalculând h-ul din lista de {{GS_NART}} lucrări (Anexa A1) obținem <b>h = {{GS_HCALC}}</b>: a 10-a lucrare are 11 citări (≥ 10), iar a 11-a are 10 citări (&lt; 11). Google Scholar nu oferă o opțiune de excludere a autocitărilor; am estimat varianta fără autocitări scăzând autocitările identificate în OpenAlex pentru aceleași titluri (barele roșii din Fig. 1): <b>h fără autocitări ≈ {{GS_HNS}}</b>. Valoarea este robustă deoarece lucrările de la limita nucleului (rangurile 9–11) nu au autocitări identificate.</p>
+{{CH_GS}}
+{{CH_YEARS}}
+<p>Evoluția anuală arată o creștere aproape monotonă a impactului începând cu 2018 (lucrările despre blockchain și IoT), cu un maxim de 131 de citări în 2025; valoarea pentru 2026 este parțială (an în curs).</p>
+{{SHOT_N_GOOGLE_SCHOLAR}}
+
+<h3 class="pb">Varianta 2 – Web of Science</h3>
+<table>
+  <tr><th>Documente</th><th>Citări</th><th>Citări fără autocitări</th><th>h-index</th><th>h fără autocitări</th></tr>
+  <tr><td class="n">{{WOS_DOC}}</td><td class="n">{{WOS_CIT}}</td><td class="n">{{WOS_CITNS}}</td><td class="n">{{WOS_H}}</td><td class="n">{{WOS_HNS}}</td></tr>
+</table>
+{{CH_WOS}}
+
+<h3>Varianta 3 – Scopus</h3>
+<table>
+  <tr><th>Documente</th><th>Citări</th><th>Citări fără autocitări</th><th>h-index</th><th>h fără autocitări</th></tr>
+  <tr><td class="n">{{SCO_DOC}}</td><td class="n">{{SCO_CIT}}</td><td class="n">{{SCO_CITNS}}</td><td class="n">{{SCO_H}}</td><td class="n">{{SCO_HNS}}</td></tr>
+</table>
+{{CH_SCO}}
+
+<h3>Varianta B – ResearchGate</h3>
+<table>
+  <tr><th>Publicații</th><th>Citări</th><th>Citiri</th><th>Research Interest</th><th>h-index</th><th>h fără autocitări</th></tr>
+  <tr><td class="n">{{RG_PUB}}</td><td class="n">{{RG_CIT}}</td><td class="n">{{RG_READ}}</td><td class="n">{{RG_RI}}</td><td class="n">{{RG_H}}</td><td class="n">{{RG_HNS}}</td></tr>
+</table>
+{{CH_RG}}
+
+<h3 class="pb">Sursă suplimentară – OpenAlex (index bibliografic deschis)</h3>
+<p>Pentru a putea calcula transparent varianta <b>fără autocitări</b> din date publice, am folosit OpenAlex (autor <code>{{OPENALEX_N}}</code>, identificat prin ORCiD). Pentru fiecare lucrare au fost descărcate toate lucrările care o citează și s-a verificat dacă autorul N apare printre autorii lucrării citante (definiția strictă a autocitării).</p>
+<div class="kpi">
+  <div><b>{{OA_N}}</b><span>lucrări indexate</span></div>
+  <div><b>{{OA_TOT}}</b><span>citări totale</span></div>
+  <div><b>{{OA_SELF}}</b><span>autocitări ({{OA_SELFP}}%)</span></div>
+  <div><b>{{OA_H}} / {{OA_HNS}}</b><span>h-index cu / fără autocitări · i10 = {{OA_I10}}</span></div>
+</div>
+{{CH_OA}}
+<p>Ponderea autocitărilor este foarte mică ({{OA_SELFP}}%), concentrată pe lucrările mai vechi (sisteme hibride, choppere multicelulare, oscilatorul Alpazur), ceea ce indică un impact generat în principal de citări externe. Eliminarea lor nu modifică h-index-ul.</p>
+
+<h3>Sinteza Etapei 1 – cazul N</h3>
+{{CH_CMP}}
+
+<h2 class="pb">3. Etapa 2 – Rețele cu conținut controlat de utilizator (cazul personal)</h2>
+<p>Ordinea de lucru urmată: (1) cont <b>ORCiD</b> – identificatorul persistent care interconectează celelalte rețele; (2) cont <b>ResearchGate</b> legat de ORCiD, cu importul/introducerea contribuțiilor; (3) profil <b>Publons</b> (în prezent Web of Science Researcher Profile) cu ResearcherID, conectat la ORCiD pentru sincronizarea lucrărilor și a activității de recenzare. Conturile au fost create cu adresa instituțională {{ST_EMAIL}}.</p>
+<table>
+  <tr><th>Rețea</th><th>Identificator / URL</th><th>Observații</th></tr>
+  <tr><td>A. ORCiD</td><td>{{ST_ORCID}}</td><td>Educație, angajare, lucrări, proiecte; legat de RG, Publons și Scopus</td></tr>
+  <tr><td>B. ResearchGate</td><td>{{ST_RG}}</td><td>Conectat cu cercetătorul N = 27 (Follow)</td></tr>
+  <tr><td>C. Publons / WoS Researcher</td><td>{{ST_PUBLONS}}</td><td>ResearcherID; sincronizare ORCiD ↔ WoS</td></tr>
+  <tr><td>Scopus</td><td>{{ST_SCOPUS}}</td><td>Profil generat automat numai după prima lucrare indexată</td></tr>
+</table>
+<h3>Contribuții introduse</h3>
+<ul>{{CONTRIB}}</ul>
+<h3>Indicatori ResearchGate după 2–3 săptămâni</h3>
+<table>
+  <tr><th>Publicații</th><th>Citiri</th><th>Citări (total / medie)</th><th>Recomandări</th><th>Urmăritori / urmăriți</th><th>Întrebări-răspunsuri</th><th>Research Interest</th><th>RG Score</th></tr>
+  <tr><td class="n">{{ST_RG_PUB}}</td><td class="n">{{ST_RG_READ}}</td><td class="n">{{ST_RG_CIT}}</td><td class="n">{{ST_RG_REC}}</td><td class="n">{{ST_RG_FOL}} / {{ST_RG_FOLW}}</td><td class="n">{{ST_RG_QA}}</td><td class="n">{{ST_RG_RI}}</td><td class="n">{{ST_RG_SCORE}}</td></tr>
+</table>
+<div class="note">Notă: ResearchGate a retras public RG Score în 2022; indicatorul principal afișat acum este <b>Research Interest</b> (ponderat după citiri, recomandări și citări). Dacă RG Score nu mai apare în profil, se menționează explicit acest lucru.</div>
+{{SHOT_A_ORCID}}
+{{SHOT_A_RESEARCHGATE_PROFILE}}
+{{SHOT_A_RESEARCHGATE_STATS}}
+{{SHOT_A_PUBLONS}}
+{{SHOT_A_RG_CONECTARE_N}}
+
+<h2 class="pb">4. Analiză comparativă și justificarea diferențelor</h2>
+<h3>4.1 De ce diferă h-index între rețele</h3>
+<ul>
+  <li><b>Acoperirea surselor.</b> Google Scholar indexează automat tot ce găsește pe web (articole, conferințe, cărți, teze, preprinturi, materiale în limba română – de ex. „Echipamente electronice pentru reglaj automat”). WoS și Scopus indexează doar reviste și conferințe selectate pe criterii editoriale; OpenAlex se situează între ele. De aceea, pentru același autor, ordinea tipică este <b>GS ≥ ResearchGate ≈ OpenAlex ≥ Scopus ≥ WoS</b>.</li>
+  <li><b>Citările numărate.</b> O citare contează doar dacă și lucrarea citantă este indexată în aceeași bază. GS numără și citări din teze, rapoarte sau documente necontrolate (inclusiv duplicate), de aceea lucrarea de la MECO 2018 are 100 de citări în GS și 69 în OpenAlex.</li>
+  <li><b>Identificarea autorului.</b> Profilurile GS sunt gestionate de autor (pot include lucrări atribuite greșit sau pot omite unele), pe când Scopus/WoS folosesc algoritmi de dezambiguizare (Author ID / ResearcherID). Există de exemplu și un alt profil GS „Florea Bogdan” (UPB, domeniu economic) – o sursă clasică de confuzie la căutarea după nume.</li>
+  <li><b>Fereastra de timp și actualizarea.</b> GS se actualizează continuu; Scopus/WoS indexează cu întârziere de săptămâni–luni. GS oferă și varianta „din 2021” (h = {{GS_H5}}), care măsoară impactul recent.</li>
+  <li><b>Tipuri de documente.</b> Unele baze exclud editorialele, abstractele de conferință sau capitolele de carte din calcul.</li>
+</ul>
+<h3>4.2 Calculul cu și fără autocitări</h3>
+<p>O autocitare este o citare dintr-o lucrare la care autorul evaluat este (co)autor. Scopus („Exclude self citations”) și WoS („Citation report without self-citations”) permit eliminarea lor; Google Scholar și ResearchGate nu. Autocitările pot umfla artificial h-index-ul mai ales la lucrările de la limita nucleului h. În cazul N = 27, analiza pe OpenAlex arată doar {{OA_SELF}} autocitări din {{OA_TOT}} ({{OA_SELFP}}%), iar h-index-ul rămâne neschimbat ({{OA_H}} → {{OA_HNS}}); prin urmare <b>valoarea semnificativă este h = {{OA_HNS}}–{{GS_HNS}}</b> în funcție de baza de date.</p>
+<h3>4.3 Comparație (necompetitivă) caz personal – caz N</h3>
+<p>Cazul N reprezintă rezultatul a peste 15 ani de activitate (prima lucrare în 2010), cu un salt de impact după orientarea spre blockchain/IoT, publicat în reviste MDPI cu acces deschis (Sensors, Sustainability) – ceea ce crește vizibilitatea și numărul de citări. Pentru cazul personal, punctul de plecare este h = 0; vizibilitatea poate fi construită prin ORCiD + ResearchGate, prin diseminarea lucrării de licență/disertației și prin publicarea la conferințe indexate.</p>
+
+<h2>5. Concluzii</h2>
+<ul>
+  <li>Cazul N = 27: h-index Google Scholar = {{GS_H}} ({{GS_CIT}} citări, i10 = {{GS_I10}}), OpenAlex = {{OA_H}} (fără autocitări {{OA_HNS}}); valorile WoS/Scopus/RG sunt prezentate în secțiunea 2(b).</li>
+  <li>Autocitările au un efect neglijabil pentru acest autor; diferențele dintre baze se explică în principal prin acoperirea diferită a surselor.</li>
+  <li>Cazul personal: h = 0 în toate bazele; conturile ORCiD, ResearchGate și Publons create formează infrastructura de vizibilitate pentru viitoarele lucrări.</li>
+</ul>
+
+<h2 class="pb">6. Anexe</h2>
+<h3>A1. Google Scholar – lucrările conf. Bogdan Cristian Florea (sortate după citări, la {{DATA}})</h3>
+<p style="font-size:9pt">Rândurile verzi formează nucleul h. „Autocit.” = autocitări identificate în OpenAlex pentru același titlu (estimare).</p>
+<table>
+  <tr><th>#</th><th>Titlu</th><th>An</th><th>Citări</th><th>Autocit.</th><th>Fără autocit.</th><th>c ≥ rang</th></tr>
+  {{GS_ROWS}}
+</table>
+<h3>A2. OpenAlex – lucrări, citări și autocitări</h3>
+<table>
+  <tr><th>#</th><th>Titlu</th><th>An</th><th>Citări</th><th>Autocit.</th><th>Fără autocit.</th></tr>
+  {{OA_ROWS}}
+</table>
+<h3>A3. Surse</h3>
+<ul>
+  <li>Google Scholar: <a href="{{GS_URL}}">{{GS_URL}}</a></li>
+  <li>ORCiD: <a href="https://orcid.org/{{ORCID_N}}">https://orcid.org/{{ORCID_N}}</a></li>
+  <li>OpenAlex: <a href="https://openalex.org/{{OPENALEX_N}}">https://openalex.org/{{OPENALEX_N}}</a></li>
+  <li>Scopus: <a href="https://www.scopus.com/authid/detail.uri?authorId={{SCOPUS_N}}">https://www.scopus.com/authid/detail.uri?authorId={{SCOPUS_N}}</a></li>
+  <li>ResearchGate: <a href="{{RG_N}}">{{RG_N}}</a></li>
+  <li>J. E. Hirsch, „An index to quantify an individual's scientific research output”, PNAS 102(46), 2005.</li>
+</ul>
+</body>
+</html>
